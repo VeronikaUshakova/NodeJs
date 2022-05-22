@@ -1,0 +1,78 @@
+doctype html
+html
+  head
+    title= title
+    style
+      include ./style.css
+  body
+    if javascript.length != 0
+      h2 JavaScript
+      for val in javascript
+        ul
+          li
+            p #{val}
+            a(href='./'+val) download
+            a(onclick=`deleteFile("/${val}")`) delete
+    if typescript.length != 0
+      h2 TypeScript
+      for val in typescript
+        ul
+          li
+            p #{val}
+            a(href='./'+val) download
+            a(onclick=`deleteFile("/${val}")`) delete
+    if definition.length != 0
+      h2 Definition
+      for val in definition
+        ul
+          li
+            p #{val}
+            a(href='./'+val) download
+            a(onclick=`deleteFile("/${val}")`) delete
+    if configuration.length != 0
+      h2 Configuration
+      for val in configuration
+        ul
+          li
+            p #{val}
+            a(href='./'+val) download
+            a(onclick=`deleteFile("/${val}")`) delete
+    if imageDetailed.length != 0
+      h2 Image
+      for valDetailed, indexDetailed in imageDetailed 
+        ul
+          li
+            p #{valDetailed}
+            for val, index in image
+              if index == indexDetailed
+                a(href='./'+val) download
+                a(onclick=`deleteFile("/${val}")`) delete
+    if logDetailed.length != 0
+      h2 Log
+      for valueDetailed, indexDetailed in logDetailed
+        for value, index in log
+          if index == indexDetailed
+            if valueDetailed.length != 0
+            ul
+              li(class="log")
+                p #{indexDetailed}
+                  for valDetailed, idDetailed in valueDetailed
+                    for val, id in value
+                      if id == idDetailed
+                        ul
+                          li
+                            p #{valDetailed}
+                            a(href='./'+val) download
+                            a(onclick=`deleteFile("/${val}")`) delete
+    if other.length != 0
+      h2 Other
+      for val in other
+        ul
+          li
+            p #{val}
+            a(href='./'+val) download
+            a(onclick=`deleteFile("/${val}")`) delete
+  script
+    include ./index.js
+
+  

@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 2em;
+}
+
+ul {
+    list-style: none;
+}
+
+li:not(.log) {
+    display: flex;
+}
+
+a {
+    display: block;
+    margin: auto 1em;
+    color: black;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    cursor: pointer;
+    color: mediumblue;
+    border-bottom: 1px solid mediumblue;
+}

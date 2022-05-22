@@ -1,0 +1,17 @@
+{
+  "name": "task-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "file-type": "^16.5.0",
+    "mime": "^2.5.2"
+  }
+}
